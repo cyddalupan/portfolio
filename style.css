@@ -1,6 +1,13 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	font-family: 'Montserrat', sans-serif;
 	text-align: center;
+	border-top: #FFCCCC solid 7px;
+	padding-top: 30px;
 }
 
 .container {
