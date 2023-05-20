@@ -4,9 +4,11 @@ html, body {
 }
 
 body {
+	margin: auto;
+	max-width: 2000px;
 	font-family: 'Montserrat', sans-serif;
 	text-align: center;
-	border-top: #FFCCCC solid 7px;
+	border-top: #FFCCCC solid 20px;
 	padding-top: 30px;
 }
 
@@ -25,9 +27,20 @@ body {
 
 .text {
 	position: absolute;
+	text-align: right;
 	top: 50%;
 	right: 20px;
 	width: 70%;
 	transform: translateY(-50%);
 	font-size: 24px;
+}
+
+.works {
+	padding: 20px;
+	margin-top: 50px;
+	text-align: left;
+}
+
+.works img {
+	max-width: 200px;
 }
