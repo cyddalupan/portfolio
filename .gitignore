@@ -2,4 +2,6 @@
 .DS_Store
 
 # Ignore all files and folders ending with .DS_Store
+*.DS_Store
+*/.DS_Store
 **/.DS_Store
