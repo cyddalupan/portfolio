@@ -1401,6 +1401,78 @@
         ::-webkit-scrollbar-thumb:hover {
             background: var(--ff-secondary);
         }
+        
+        /* Skills Icon Grid */
+        .skills-icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .skill-icon-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 1.2rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .skill-icon-item:hover {
+            background: rgba(0, 123, 255, 0.15);
+            border-color: var(--ff-primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 123, 255, 0.2);
+        }
+        
+        .skill-icon {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            filter: grayscale(20%);
+            transition: all 0.3s ease;
+        }
+        
+        .skill-icon-item:hover .skill-icon {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .skills-icon-grid {
+                grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+                gap: 1rem;
+            }
+            
+            .skill-icon-item {
+                padding: 1rem;
+            }
+            
+            .skill-icon {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .skills-icon-grid {
+                grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+                gap: 0.8rem;
+            }
+            
+            .skill-icon-item {
+                padding: 0.8rem;
+            }
+            
+            .skill-icon {
+                width: 36px;
+                height: 36px;
+            }
+        }
     </style>
 </head>
 <body class="ff-cursor">
@@ -1685,207 +1757,70 @@
                 <div class="row mt-4">
                     <div class="col-md-12">
                         <h4>FRAMEWORKS & TOOLS</h4>
-                        <div class="ff-table">
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td data-label="FRAMEWORK">
-                                            <div class="skill-item">
-                                                <img src="/img/skills/angularjs.png" alt="Angular" class="skill-logo">
-                                                <span>Angular</span>
-                                            </div>
-                                        </td>
-                                        <td data-label="RATING">
-                                            <div class="ff-progress hp">
-                                                <div class="ff-progress-bar" style="width: 99%"></div>
-                                            </div>
-                                            <span class="rating-text">9.9/10</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td data-label="FRAMEWORK">
-                                            <div class="skill-item">
-                                                <img src="/img/skills/webdev4.png" alt="Laravel" class="skill-logo">
-                                                <span>Laravel</span>
-                                            </div>
-                                        </td>
-                                        <td data-label="RATING">
-                                            <div class="ff-progress hp">
-                                                <div class="ff-progress-bar" style="width: 98%"></div>
-                                            </div>
-                                            <span class="rating-text">9.8/10</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td data-label="FRAMEWORK">
-                                            <div class="skill-item">
-                                                <img src="/img/skills/webdev5.png" alt="Django" class="skill-logo">
-                                                <span>Django</span>
-                                            </div>
-                                        </td>
-                                        <td data-label="RATING">
-                                            <div class="ff-progress hp">
-                                                <div class="ff-progress-bar" style="width: 97%"></div>
-                                            </div>
-                                            <span class="rating-text">9.7/10</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td data-label="FRAMEWORK">
-                                            <div class="skill-item">
-                                                <img src="/img/skills/openai.png" alt="OpenAI" class="skill-logo">
-                                                <span>OpenAI & LLM's</span>
-                                            </div>
-                                        </td>
-                                        <td data-label="RATING">
-                                            <div class="ff-progress hp">
-                                                <div class="ff-progress-bar" style="width: 90%"></div>
-                                            </div>
-                                            <span class="rating-text">9.0/10</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td data-label="FRAMEWORK">
-                                            <div class="skill-item">
-                                                <img src="/img/skills/wordpress.png" alt="WordPress" class="skill-logo">
-                                                <span>WordPress</span>
-                                            </div>
-                                        </td>
-                                        <td data-label="RATING">
-                                            <div class="ff-progress hp">
-                                                <div class="ff-progress-bar" style="width: 95%"></div>
-                                            </div>
-                                            <span class="rating-text">9.5/10</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td data-label="FRAMEWORK">
-                                            <div class="skill-item">
-                                                <img src="/img/skills/webdev6.png" alt="CodeIgniter" class="skill-logo">
-                                                <span>CodeIgniter</span>
-                                            </div>
-                                        </td>
-                                        <td data-label="RATING">
-                                            <div class="ff-progress mp">
-                                                <div class="ff-progress-bar" style="width: 85%"></div>
-                                            </div>
-                                            <span class="rating-text">8.5/10</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td data-label="FRAMEWORK">
-                                            <div class="skill-item">
-                                                <img src="/img/skills/zend.png" alt="Zend Framework" class="skill-logo">
-                                                <span>Zend Framework 2</span>
-                                            </div>
-                                        </td>
-                                        <td data-label="RATING">
-                                            <div class="ff-progress mp">
-                                                <div class="ff-progress-bar" style="width: 80%"></div>
-                                            </div>
-                                            <span class="rating-text">8.0/10</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td data-label="FRAMEWORK">
-                                            <div class="skill-item">
-                                                <img src="/img/skills/webdev7.png" alt="Ionic" class="skill-logo">
-                                                <span>Ionic</span>
-                                            </div>
-                                        </td>
-                                        <td data-label="RATING">
-                                            <div class="ff-progress hp">
-                                                <div class="ff-progress-bar" style="width: 90%"></div>
-                                            </div>
-                                            <span class="rating-text">9.0/10</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td data-label="FRAMEWORK">
-                                            <div class="skill-item">
-                                                <img src="/img/skills/webdev8.png" alt="React" class="skill-logo">
-                                                <span>React</span>
-                                            </div>
-                                        </td>
-                                        <td data-label="RATING">
-                                            <div class="ff-progress mp">
-                                                <div class="ff-progress-bar" style="width: 85%"></div>
-                                            </div>
-                                            <span class="rating-text">8.5/10</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td data-label="FRAMEWORK">
-                                            <div class="skill-item">
-                                                <img src="/img/skills/webdev9.png" alt="Vue.js" class="skill-logo">
-                                                <span>Vue.js</span>
-                                            </div>
-                                        </td>
-                                        <td data-label="RATING">
-                                            <div class="ff-progress mp">
-                                                <div class="ff-progress-bar" style="width: 80%"></div>
-                                            </div>
-                                            <span class="rating-text">8.0/10</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td data-label="FRAMEWORK">
-                                            <div class="skill-item">
-                                                <img src="/img/skills/webdev10.png" alt="Gorilla mux" class="skill-logo">
-                                                <span>Gorilla mux</span>
-                                            </div>
-                                        </td>
-                                        <td data-label="RATING">
-                                            <div class="ff-progress mp">
-                                                <div class="ff-progress-bar" style="width: 80%"></div>
-                                            </div>
-                                            <span class="rating-text">8.0/10</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td data-label="FRAMEWORK">
-                                            <div class="skill-item">
-                                                <img src="/img/skills/redux.png" alt="Redux" class="skill-logo">
-                                                <span>Redux (NGRX)</span>
-                                            </div>
-                                        </td>
-                                        <td data-label="RATING">
-                                            <div class="ff-progress hp">
-                                                <div class="ff-progress-bar" style="width: 90%"></div>
-                                            </div>
-                                            <span class="rating-text">9.0/10</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td data-label="FRAMEWORK">
-                                            <div class="skill-item">
-                                                <img src="/img/skills/appengine.png" alt="Google App Engine" class="skill-logo">
-                                                <span>Google App Engine</span>
-                                            </div>
-                                        </td>
-                                        <td data-label="RATING">
-                                            <div class="ff-progress hp">
-                                                <div class="ff-progress-bar" style="width: 90%"></div>
-                                            </div>
-                                            <span class="rating-text">9.0/10</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td data-label="FRAMEWORK">
-                                            <div class="skill-item">
-                                                <img src="/img/skills/webdev11.png" alt="Azure" class="skill-logo">
-                                                <span>Azure</span>
-                                            </div>
-                                        </td>
-                                        <td data-label="RATING">
-                                            <div class="ff-progress hp">
-                                                <div class="ff-progress-bar" style="width: 90%"></div>
-                                            </div>
-                                            <span class="rating-text">9.0/10</span>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <p class="text-secondary mb-4">Technologies I work with</p>
+                        
+                        <!-- Clean Icon Grid -->
+                        <div class="skills-icon-grid">
+                            <div class="skill-icon-item">
+                                <img src="/img/skills/angularjs.png" alt="Angular" class="skill-icon">
+                            </div>
+                            <div class="skill-icon-item">
+                                <img src="/img/skills/webdev4.png" alt="Laravel" class="skill-icon">
+                            </div>
+                            <div class="skill-icon-item">
+                                <img src="/img/skills/webdev5.png" alt="Django" class="skill-icon">
+                            </div>
+                            <div class="skill-icon-item">
+                                <img src="/img/skills/openai.png" alt="OpenAI" class="skill-icon">
+                            </div>
+                            <div class="skill-icon-item">
+                                <img src="/img/skills/wordpress.png" alt="WordPress" class="skill-icon">
+                            </div>
+                            <div class="skill-icon-item">
+                                <img src="/img/skills/webdev6.png" alt="CodeIgniter" class="skill-icon">
+                            </div>
+                            <div class="skill-icon-item">
+                                <img src="/img/skills/zend.png" alt="Zend Framework" class="skill-icon">
+                            </div>
+                            <div class="skill-icon-item">
+                                <img src="/img/skills/webdev7.png" alt="Ionic" class="skill-icon">
+                            </div>
+                            <div class="skill-icon-item">
+                                <img src="/img/skills/webdev8.png" alt="React" class="skill-icon">
+                            </div>
+                            <div class="skill-icon-item">
+                                <img src="/img/skills/webdev9.png" alt="Vue.js" class="skill-icon">
+                            </div>
+                            <div class="skill-icon-item">
+                                <img src="/img/skills/webdev10.png" alt="Gorilla mux" class="skill-icon">
+                            </div>
+                            <div class="skill-icon-item">
+                                <img src="/img/skills/redux.png" alt="Redux" class="skill-icon">
+                            </div>
+                            <div class="skill-icon-item">
+                                <img src="/img/skills/appengine.png" alt="Google App Engine" class="skill-icon">
+                            </div>
+                            <div class="skill-icon-item">
+                                <img src="/img/skills/webdev11.png" alt="Azure" class="skill-icon">
+                            </div>
+                            <div class="skill-icon-item">
+                                <img src="/img/skills/php.png" alt="PHP" class="skill-icon">
+                            </div>
+                            <div class="skill-icon-item">
+                                <img src="/img/skills/python.png" alt="Python" class="skill-icon">
+                            </div>
+                            <div class="skill-icon-item">
+                                <img src="/img/skills/golang.png" alt="Go" class="skill-icon">
+                            </div>
+                            <div class="skill-icon-item">
+                                <img src="/img/skills/html.png" alt="HTML/CSS" class="skill-icon">
+                            </div>
+                            <div class="skill-icon-item">
+                                <img src="/img/skills/bootstrap.png" alt="Bootstrap" class="skill-icon">
+                            </div>
+                            <div class="skill-icon-item">
+                                <img src="/img/skills/git.png" alt="Git" class="skill-icon">
+                            </div>
                         </div>
                     </div>
                 </div>
