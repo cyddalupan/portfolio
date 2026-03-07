@@ -1434,11 +1434,16 @@
             object-fit: contain;
             filter: grayscale(20%);
             transition: all 0.3s ease;
+            background-color: white;
+            padding: 8px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         
         .skill-icon-item:hover .skill-icon {
             filter: grayscale(0%);
             transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
         
         /* Responsive adjustments */
@@ -1455,6 +1460,8 @@
             .skill-icon {
                 width: 40px;
                 height: 40px;
+                padding: 6px;
+                border-radius: 6px;
             }
         }
         
@@ -1471,6 +1478,8 @@
             .skill-icon {
                 width: 36px;
                 height: 36px;
+                padding: 5px;
+                border-radius: 5px;
             }
         }
     </style>
