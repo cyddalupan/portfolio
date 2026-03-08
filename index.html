@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CYD | Software Engineer / Developer / Programmer</title>
+    <title>Cleddrece Yuandenn M. Dalupan (CYD) | Full-Stack IT Solutions Architect & Developer</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
     
     <!-- Cyberpunk CSS Framework -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cafetechne/Final-Fantasy-CSS@master/dist/final-fantasy.css">
@@ -291,10 +299,6 @@
         
         /* Tech tags overflow prevention */
         .tech-tag {
-            max-width: 120px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
             display: inline-block;
             vertical-align: middle;
         }
@@ -1608,6 +1612,14 @@
                 left: 10px;
             }
             
+            /* Tech tags on very small screens */
+            .tech-tag {
+                max-width: 100px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            
             .timeline-marker {
                 left: -20px;
                 width: 20px;
@@ -1849,6 +1861,164 @@
                 display: none !important;
             }
         }
+        
+        /* Custom badge styling for IT solutions badges */
+        .badge.bg-opacity-25 {
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+        }
+        
+        .badge.bg-opacity-25:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Cyberpunk glow effects for badges */
+        .badge.bg-primary {
+            box-shadow: 0 0 10px rgba(var(--ff-primary-rgb, 0, 216, 255), 0.3);
+        }
+        
+        .badge.bg-warning {
+            box-shadow: 0 0 10px rgba(255, 193, 7, 0.3);
+        }
+        
+        .badge.bg-info {
+            box-shadow: 0 0 10px rgba(23, 162, 184, 0.3);
+        }
+        
+        .badge.bg-success {
+            box-shadow: 0 0 10px rgba(40, 167, 69, 0.3);
+        }
+        
+        .badge.bg-danger {
+            box-shadow: 0 0 10px rgba(220, 53, 69, 0.3);
+        }
+        
+        .badge.bg-primary:hover {
+            box-shadow: 0 0 20px rgba(var(--ff-primary-rgb, 0, 216, 255), 0.6);
+        }
+        
+        .badge.bg-warning:hover {
+            box-shadow: 0 0 20px rgba(255, 193, 7, 0.6);
+        }
+        
+        .badge.bg-info:hover {
+            box-shadow: 0 0 20px rgba(23, 162, 184, 0.6);
+        }
+        
+        .badge.bg-success:hover {
+            box-shadow: 0 0 20px rgba(40, 167, 69, 0.6);
+        }
+        
+        .badge.bg-danger:hover {
+            box-shadow: 0 0 20px rgba(220, 53, 69, 0.6);
+        }
+        
+        /* Responsive adjustments for badges */
+        @media (max-width: 768px) {
+            .badge.bg-opacity-25 {
+                font-size: 0.8rem;
+                padding: 0.5rem 0.75rem !important;
+            }
+            
+            .d-flex.flex-wrap.justify-content-center.gap-3 {
+                gap: 0.5rem !important;
+            }
+            
+            .d-flex.flex-wrap.justify-content-center.gap-3.mb-2 {
+                margin-bottom: 0.5rem !important;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .badge.bg-opacity-25 {
+                font-size: 0.75rem;
+                padding: 0.4rem 0.6rem !important;
+            }
+            
+            .d-flex.flex-wrap.justify-content-center.gap-3 {
+                gap: 0.4rem !important;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .badge.bg-opacity-25 {
+                font-size: 0.7rem;
+                padding: 0.35rem 0.5rem !important;
+                min-width: 120px;
+                text-align: center;
+            }
+            
+            .d-flex.flex-wrap.justify-content-center.gap-3 {
+                gap: 0.3rem !important;
+            }
+            
+            /* Stack badges vertically on very small screens */
+            .d-flex.flex-wrap.justify-content-center.gap-3 > .badge {
+                flex: 0 0 calc(50% - 0.3rem);
+                margin-bottom: 0.3rem;
+            }
+        }
+        
+        /* Screenshot Enhancement Styles */
+        .screenshot-container:hover .screenshot-image {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(var(--ff-primary-rgb, 0, 216, 255), 0.3);
+            border-color: rgba(var(--ff-primary-rgb, 0, 216, 255), 0.5);
+        }
+        
+        .screenshot-image {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .screenshot-label {
+            transition: all 0.3s ease;
+        }
+        
+        .screenshot-container:hover .screenshot-label {
+            color: var(--ff-primary) !important;
+        }
+        
+        /* Screenshot modal/lightbox styles */
+        .screenshot-modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .screenshot-modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 12px;
+            border: 3px solid var(--ff-primary);
+            box-shadow: 0 0 50px rgba(var(--ff-primary-rgb, 0, 216, 255), 0.5);
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .close-modal:hover {
+            color: var(--ff-primary);
+        }
     </style>
 </head>
 <body class="ff-cursor">
@@ -1874,20 +2044,44 @@
                 <div class="row align-items-center">
                     <div class="col-md-4 text-center">
                         <img src="https://toybits.cloud/uploads/toybits-promo-1772787975.jpg" 
-                             alt="CYD Profile Picture" 
+                             alt="Cleddrece Yuandenn M. Dalupan - Profile Picture" 
                              class="profile-pic rounded-circle border border-3 border-primary d-block mx-auto"
                              style="width: 200px; height: 200px; object-fit: cover;">
                     </div>
                     <div class="col-md-8">
                         <div class="d-flex flex-column h-100 justify-content-center">
-                            <h1 class="glitch">CYD</h1>
-                            <h3 class="text-secondary mb-4">SOFTWARE ENGINEER / DEVELOPER / PROGRAMMER</h3>
+                            <h1 class="glitch mb-2">Cleddrece Yuandenn M. Dalupan</h1>
+                            <div class="text-muted mb-3" style="font-size: 1.2rem;">
+                                <i class="fas fa-user-tie me-1"></i> Professional Alias: <strong>CYD</strong>
+                            </div>
+                            <h3 class="text-secondary mb-4">FULL-STACK IT SOLUTIONS ARCHITECT</h3>
+                            <div class="mb-4">
+                                <div class="d-flex flex-wrap justify-content-center gap-3 mb-2">
+                                    <span class="badge bg-primary bg-opacity-25 text-primary border border-primary px-3 py-2">
+                                        <i class="fas fa-code me-1"></i> Software Engineer
+                                    </span>
+                                    <span class="badge bg-warning bg-opacity-25 text-warning border border-warning px-3 py-2">
+                                        <i class="fas fa-server me-1"></i> DevOps Engineer
+                                    </span>
+                                    <span class="badge bg-info bg-opacity-25 text-info border border-info px-3 py-2">
+                                        <i class="fas fa-cloud me-1"></i> Cloud Architect
+                                    </span>
+                                </div>
+                                <div class="d-flex flex-wrap justify-content-center gap-3">
+                                    <span class="badge bg-success bg-opacity-25 text-success border border-success px-3 py-2">
+                                        <i class="fas fa-database me-1"></i> Database Specialist
+                                    </span>
+                                    <span class="badge bg-danger bg-opacity-25 text-danger border border-danger px-3 py-2">
+                                        <i class="fas fa-robot me-1"></i> AI/ML Integration
+                                    </span>
+                                </div>
+                            </div>
                             
                             <div class="terminal mt-3">
-                                <p>> SYSTEM INITIALIZED...</p>
-                                <p>> LOADING PORTFOLIO DATA...</p>
-                                <p>> WELCOME TO MY PROFESSIONAL PORTFOLIO</p>
-                                <p>> STATUS: AVAILABLE FOR OPPORTUNITIES</p>
+                                <p>> IT SOLUTIONS ARCHITECT SYSTEM ONLINE...</p>
+                                <p>> LOADING COMPREHENSIVE CAPABILITIES...</p>
+                                <p>> FULL-STACK TECHNOLOGY PORTFOLIO READY</p>
+                                <p>> STATUS: AVAILABLE FOR COMPLEX PROJECTS</p>
                             </div>
                             
                             <div class="character-stats mt-4">
@@ -1959,7 +2153,7 @@
                                     <i class="fas fa-robot fa-2x"></i>
                                 </div>
                             </div>
-                            <p class="mt-auto text-center mb-0">EQUIPPED SKILLS READY FOR DEPLOYMENT</p>
+                            <p class="mt-auto text-center mb-0">COMPREHENSIVE IT SOLUTIONS READY FOR DEPLOYMENT</p>
                         </div>
                     </div>
                     
@@ -1967,7 +2161,7 @@
                         <div class="ff-card equal-height">
                             <div class="ff-card-header">CURRENT FOCUS</div>
                             <div class="d-flex flex-column h-100">
-                                <p class="mb-3">BUILDING SCALABLE SOLUTIONS WITH MODERN TECHNOLOGY</p>
+                                <p class="mb-3">DELIVERING END-TO-END IT SOLUTIONS ACROSS THE ENTIRE STACK</p>
                                 <div class="mt-auto">
                                     <div class="ff-progress hp">
                                         <div class="ff-progress-bar" style="width: 90%"></div>
@@ -1989,9 +2183,9 @@
                     <div class="col-md-6 d-flex flex-column">
                         <div class="ff-card equal-height mb-3">
                             <div class="ff-card-body">
-                                <p class="mb-3">I am a full-stack developer and technology strategist with expertise in modern web technologies and scalable system architecture. With extensive experience across the development lifecycle, I specialize in creating robust solutions that drive business value and enhance user experiences.</p>
+                                <p class="mb-3">I am a comprehensive IT solutions architect with 12+ years of experience delivering end-to-end technology solutions. My expertise spans the entire technology stack—from frontend development and backend architecture to cloud infrastructure, DevOps, database optimization, and AI integration.</p>
                                 
-                                <p class="mb-4">My technical journey combines deep engineering knowledge with strategic vision, allowing me to bridge the gap between complex technical requirements and practical business solutions.</p>
+                                <p class="mb-4">As a full IT solution provider, I bridge the gap between business requirements and technical implementation, delivering scalable systems that drive efficiency, innovation, and competitive advantage across diverse industries.</p>
                                 
                                 <div class="ff-alert ff-alert-info mt-auto">
                                     <i class="fas fa-info-circle me-2"></i> CURRENTLY AVAILABLE FOR CONTRACT WORK
@@ -2006,19 +2200,22 @@
                                 <h4 class="mb-3"><i class="fas fa-star me-2"></i> SPECIALIZATIONS</h4>
                                 <ul class="ff-list-group">
                                     <li class="ff-list-group-item d-flex align-items-center">
-                                        <i class="fas fa-shield-alt text-primary me-3"></i> Full-Stack Web Development
+                                        <i class="fas fa-code text-primary me-3"></i> Full-Stack Development (Frontend & Backend)
                                     </li>
                                     <li class="ff-list-group-item d-flex align-items-center">
-                                        <i class="fas fa-brain text-warning me-3"></i> System Architecture & Design
+                                        <i class="fas fa-server text-warning me-3"></i> Cloud Architecture & DevOps Automation
                                     </li>
                                     <li class="ff-list-group-item d-flex align-items-center">
-                                        <i class="fas fa-cloud text-info me-3"></i> Cloud Infrastructure & DevOps
+                                        <i class="fas fa-database text-info me-3"></i> Database Systems & Performance Optimization
                                     </li>
                                     <li class="ff-list-group-item d-flex align-items-center">
-                                        <i class="fas fa-mobile-alt text-success me-3"></i> API Development & Integration
+                                        <i class="fas fa-robot text-success me-3"></i> AI/ML Integration & Automation Solutions
                                     </li>
                                     <li class="ff-list-group-item d-flex align-items-center">
-                                        <i class="fas fa-database text-danger me-3"></i> Database Design & Optimization
+                                        <i class="fas fa-project-diagram text-danger me-3"></i> Enterprise System Architecture
+                                    </li>
+                                    <li class="ff-list-group-item d-flex align-items-center">
+                                        <i class="fas fa-shield-alt text-purple me-3"></i> Security & Infrastructure Hardening
                                     </li>
                                 </ul>
                             </div>
@@ -2488,400 +2685,213 @@
         <!-- Unified Portfolio Section with Tabs -->
         <section id="portfolio" class="ff-window mb-4">
             <div class="ff-window-content">
-                <h2><i class="fas fa-briefcase"></i> PORTFOLIO EVOLUTION</h2>
-                <p class="text-secondary">MY JOURNEY THROUGH 22+ PROJECTS (2018-PRESENT)</p>
+                <h2><i class="fas fa-briefcase"></i> PORTFOLIO</h2>
+                <p class="text-secondary">REAL-WORLD PROJECTS & TECHNICAL SOLUTIONS</p>
                 
-                <!-- Portfolio Tabs -->
-                <div class="portfolio-tabs mb-4">
-                    <div class="d-flex flex-wrap gap-2">
-                        <button class="portfolio-tab active" data-tab="recent">RECENT PROJECTS</button>
-                        <button class="portfolio-tab" data-tab="legacy">LEGACY PROJECTS (2018-2023)</button>
-                        <button class="portfolio-tab" data-tab="skills">TECHNOLOGY MASTERY</button>
+                <!-- Portfolio Introduction -->
+                <div class="mb-5">
+                    <p class="text-secondary" style="font-size: 1.1rem; line-height: 1.6;">
+                        <i class="fas fa-quote-left me-2 text-primary"></i>
+                        Below are selected projects showcasing my expertise across multiple industries. 
+                        Each project represents a comprehensive solution to real business challenges, 
+                        demonstrating technical proficiency, strategic thinking, and execution excellence.
+                        <i class="fas fa-quote-right ms-2 text-primary"></i>
+                    </p>
+                    <div class="d-flex flex-wrap gap-2 mt-3">
+                        <span class="ff-badge">Full-Stack Development</span>
+                        <span class="ff-badge">Business Automation</span>
+                        <span class="ff-badge">Cloud Infrastructure</span>
+                        <span class="ff-badge">AI Integration</span>
+                        <span class="ff-badge">Enterprise Systems</span>
+                        <span class="ff-badge">API Development</span>
                     </div>
                 </div>
                 
-                <!-- Recent Projects Tab -->
-                <div class="portfolio-tab-content active" id="recent-tab">
-                    <div class="portfolio-grid">
-                        <div class="portfolio-item">
-                            <h4 class="mb-2">ENTERPRISE E-COMMERCE PLATFORM</h4>
-                            <p class="text-secondary mb-3">Scalable online marketplace with real-time inventory management and payment processing.</p>
-                            <div class="d-flex flex-wrap mt-auto">
-                                <span class="ff-badge">React</span>
-                                <span class="ff-badge">Node.js</span>
-                                <span class="ff-badge">MongoDB</span>
-                            </div>
-                        </div>
-                        
-                        <div class="portfolio-item">
-                            <h4 class="mb-2">CLOUD INFRASTRUCTURE MANAGEMENT</h4>
-                            <p class="text-secondary mb-3">Automated deployment system for cloud resources with monitoring and scaling capabilities.</p>
-                            <div class="d-flex flex-wrap mt-auto">
-                                <span class="ff-badge">AWS</span>
-                                <span class="ff-badge">Terraform</span>
-                                <span class="ff-badge">Docker</span>
-                            </div>
-                        </div>
-                        
-                        <div class="portfolio-item">
-                            <h4 class="mb-2">REAL-TIME ANALYTICS DASHBOARD</h4>
-                            <p class="text-secondary mb-3">Data visualization platform for business intelligence with live data streaming.</p>
-                            <div class="d-flex flex-wrap mt-auto">
-                                <span class="ff-badge">Vue.js</span>
-                                <span class="ff-badge">WebSockets</span>
-                                <span class="ff-badge">PostgreSQL</span>
-                            </div>
-                        </div>
-                        
-                        <div class="portfolio-item">
-                            <h4 class="mb-2">MOBILE FINANCE APPLICATION</h4>
-                            <p class="text-secondary mb-3">Cross-platform mobile banking app with secure transactions and financial planning tools.</p>
-                            <div class="d-flex flex-wrap mt-auto">
-                                <span class="ff-badge">React Native</span>
-                                <span class="ff-badge">Firebase</span>
-                                <span class="ff-badge">Security</span>
-                            </div>
-                        </div>
-                        
-                        <div class="portfolio-item">
-                            <h4 class="mb-2">API GATEWAY & MICROSERVICES</h4>
-                            <p class="text-secondary mb-3">Distributed system architecture with API management and service orchestration.</p>
-                            <div class="d-flex flex-wrap mt-auto">
-                                <span class="ff-badge">Kubernetes</span>
-                                <span class="ff-badge">GraphQL</span>
-                                <span class="ff-badge">Redis</span>
-                            </div>
-                        </div>
-                        
-                        <div class="portfolio-item">
-                            <h4 class="mb-2">CONTENT MANAGEMENT SYSTEM</h4>
-                            <p class="text-secondary mb-3">Custom CMS with multi-tenant architecture and advanced content delivery network.</p>
-                            <div class="d-flex flex-wrap mt-auto">
-                                <span class="ff-badge">Laravel</span>
-                                <span class="ff-badge">MySQL</span>
-                                <span class="ff-badge">CDN</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Legacy Projects Tab -->
-                <div class="portfolio-tab-content" id="legacy-tab">
-                    <div class="legacy-intro mb-4">
-                        <div class="ff-card">
+                <!-- Project Grid -->
+                <div class="row">
+                    <!-- Toybits: Technology Optimizes Your Business Integrating Tasks Seamlessly -->
+                    <div class="col-md-4 mb-4">
+                        <div class="ff-card h-100">
                             <div class="ff-card-body">
-                                <h4 class="mb-3"><i class="fas fa-history me-2"></i> My Development Journey (2018-2023)</h4>
-                                <p>This collection represents my growth as a developer through 22+ projects completed between 2018-2023. Each project showcases different aspects of my technical evolution and the diverse challenges I've tackled.</p>
-                                <div class="d-flex flex-wrap gap-2 mt-3">
-                                    <span class="ff-badge">PHP</span>
-                                    <span class="ff-badge">Python</span>
-                                    <span class="ff-badge">GoLang</span>
-                                    <span class="ff-badge">JavaScript</span>
-                                    <span class="ff-badge">TypeScript</span>
-                                    <span class="ff-badge">Angular</span>
-                                    <span class="ff-badge">Laravel</span>
-                                    <span class="ff-badge">Django</span>
-                                    <span class="ff-badge">React</span>
-                                    <span class="ff-badge">Vue.js</span>
+                                <div class="mb-4 text-center">
+                                    <img src="https://toybits.cloud/uploads/toybits-promo-1772980706.png" 
+                                         alt="Toybits: Technology Optimizes Your Business Integrating Tasks Seamlessly" 
+                                         class="img-fluid rounded shadow-lg mb-2 w-100"
+                                         style="height: 180px; object-fit: cover; width: 100% !important;">
+                                </div>
+                                <h5 class="mb-3">Toybits: Technology Optimizes Your Business Integrating Tasks Seamlessly</h5>
+                                <p class="text-secondary mb-3 fw-bold">YOUR BUSINESS. AUTOMATED.</p>
+                                <p class="text-secondary mb-3">
+                                    <i class="fas fa-quote-left me-2 text-primary"></i>
+                                    Isang Buong Digital System na Magtatrabaho Para Sa'yo 24/7.
+                                    <i class="fas fa-quote-right ms-2 text-primary"></i>
+                                </p>
+                                <p class="text-secondary mb-3">
+                                    <strong>PROCESS:</strong> We automate ANY business process you define.
+                                </p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="tech-badge">Business Automation</span>
+                                    <span class="tech-badge">24/7 Systems</span>
+                                    <span class="tech-badge">Process Optimization</span>
+                                    <span class="tech-badge">Digital Transformation</span>
+                                </div>
+                                <div class="mt-3 pt-3 border-top">
+                                    <a href="https://toybits.cloud/" target="_blank" class="ff-btn ff-btn-primary w-100">
+                                        <i class="fas fa-external-link-alt me-2"></i> Visit Toybits
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="legacy-projects-grid">
-                        <div class="legacy-project-card">
-                            <div class="legacy-project-header">
-                                <h4>VOCUS Telecommunications</h4>
-                                <span class="legacy-project-year">2022</span>
-                            </div>
-                            <p class="legacy-project-desc">Enterprise telecommunications platform with customer management and billing systems.</p>
-                            <div class="legacy-project-tech">
-                                <span class="tech-badge">Angular</span>
-                                <span class="tech-badge">TypeScript</span>
-                                <span class="tech-badge">Microservices</span>
-                            </div>
-                        </div>
-                        
-                        <div class="legacy-project-card">
-                            <div class="legacy-project-header">
-                                <h4>E-Commerce Platform</h4>
-                                <span class="legacy-project-year">2021</span>
-                            </div>
-                            <p class="legacy-project-desc">Full-featured online marketplace with inventory management and payment processing.</p>
-                            <div class="legacy-project-tech">
-                                <span class="tech-badge">Laravel</span>
-                                <span class="tech-badge">Vue.js</span>
-                                <span class="tech-badge">MySQL</span>
-                            </div>
-                        </div>
-                        
-                        <div class="legacy-project-card">
-                            <div class="legacy-project-header">
-                                <h4>Content Management System</h4>
-                                <span class="legacy-project-year">2020</span>
-                            </div>
-                            <p class="legacy-project-desc">Custom CMS for publishing and managing digital content across multiple channels.</p>
-                            <div class="legacy-project-tech">
-                                <span class="tech-badge">WordPress</span>
-                                <span class="tech-badge">PHP</span>
-                                <span class="tech-badge">jQuery</span>
-                            </div>
-                        </div>
-                        
-                        <div class="legacy-project-card">
-                            <div class="legacy-project-header">
-                                <h4>Mobile Banking App</h4>
-                                <span class="legacy-project-year">2019</span>
-                            </div>
-                            <p class="legacy-project-desc">Secure mobile banking application with transaction processing and account management.</p>
-                            <div class="legacy-project-tech">
-                                <span class="tech-badge">React Native</span>
-                                <span class="tech-badge">Node.js</span>
-                                <span class="tech-badge">MongoDB</span>
-                            </div>
-                        </div>
-                        
-                        <div class="legacy-project-card">
-                            <div class="legacy-project-header">
-                                <h4>Analytics Dashboard</h4>
-                                <span class="legacy-project-year">2018</span>
-                            </div>
-                            <p class="legacy-project-desc">Real-time data visualization platform for business intelligence and reporting.</p>
-                            <div class="legacy-project-tech">
-                                <span class="tech-badge">Python</span>
-                                <span class="tech-badge">Django</span>
-                                <span class="tech-badge">Chart.js</span>
-                            </div>
-                        </div>
-                        
-                        <div class="legacy-project-card">
-                            <div class="legacy-project-header">
-                                <h4>API Gateway</h4>
-                                <span class="legacy-project-year">2021</span>
-                            </div>
-                            <p class="legacy-project-desc">Microservices architecture with API management and service orchestration.</p>
-                            <div class="legacy-project-tech">
-                                <span class="tech-badge">GoLang</span>
-                                <span class="tech-badge">Gorilla Mux</span>
-                                <span class="tech-badge">Docker</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="text-center mt-4">
-                        <div class="ff-alert ff-alert-info">
-                            <i class="fas fa-info-circle me-2"></i> This represents <strong>22+ projects</strong> completed between 2018-2023, showcasing continuous growth and adaptation to evolving technologies.
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Skills Mastery Tab -->
-                <div class="portfolio-tab-content" id="skills-tab">
-                    <div class="skills-mastery-intro mb-4">
-                        <div class="ff-card">
+                    <!-- KENSHI: Kiosk and Easy Navigation System for Handling Inventory -->
+                    <div class="col-md-4 mb-4">
+                        <div class="ff-card h-100">
                             <div class="ff-card-body">
-                                <h4 class="mb-3"><i class="fas fa-cogs me-2"></i> Complete Technology Stack</h4>
-                                <p>My expertise spans across multiple programming languages, frameworks, and platforms. This comprehensive view shows my proficiency levels across 20+ technologies accumulated through years of hands-on experience.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Enhanced Skills Table -->
-                    <div class="skills-mastery-grid">
-                        <div class="skills-category">
-                            <h5><i class="fas fa-code me-2"></i> Programming Languages</h5>
-                            <div class="skills-list">
-                                <div class="skill-mastery-item">
-                                    <span class="skill-name">PHP</span>
-                                    <div class="skill-mastery-bar">
-                                        <div class="skill-mastery-fill" style="width: 98%"></div>
-                                    </div>
-                                    <span class="skill-rating">9.8/10</span>
+                                <div class="mb-4 text-center">
+                                    <img src="https://toybits.cloud/uploads/toybits-promo-1772980878.png" 
+                                         alt="KENSHI: Kiosk and Easy Navigation System for Handling Inventory" 
+                                         class="img-fluid rounded shadow-lg mb-2 w-100"
+                                         style="height: 180px; object-fit: cover; width: 100% !important;">
                                 </div>
-                                <div class="skill-mastery-item">
-                                    <span class="skill-name">JavaScript / TypeScript</span>
-                                    <div class="skill-mastery-bar">
-                                        <div class="skill-mastery-fill" style="width: 99%"></div>
-                                    </div>
-                                    <span class="skill-rating">9.9/10</span>
+                                <h5 class="mb-3">KENSHI: Kiosk and Easy Navigation System for Handling Inventory</h5>
+                                <p class="text-secondary mb-3 fw-bold">The Smart Chatbot Revolutionizing Your Business – Just Like It Does Mine!</p>
+                                <p class="text-secondary mb-3">
+                                    <i class="fas fa-quote-left me-2 text-primary"></i>
+                                    As a business owner myself, I'm using KENSHI right now to handle inquiries, engage customers, and drive sales on my Facebook page. And guess what? KENSHI can do the same for YOUR business.
+                                    <i class="fas fa-quote-right ms-2 text-primary"></i>
+                                </p>
+                                <p class="text-secondary mb-3">
+                                    A complete business solution combining inventory management kiosk systems with smart chatbot technology for 24/7 customer service and sales automation.
+                                </p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="tech-badge">Smart Chatbot</span>
+                                    <span class="tech-badge">Inventory Management</span>
+                                    <span class="tech-badge">24/7 Customer Service</span>
+                                    <span class="tech-badge">Sales Automation</span>
+                                    <span class="tech-badge">Kiosk Systems</span>
+                                    <span class="tech-badge">Facebook Integration</span>
                                 </div>
-                                <div class="skill-mastery-item">
-                                    <span class="skill-name">Python</span>
-                                    <div class="skill-mastery-bar">
-                                        <div class="skill-mastery-fill" style="width: 95%"></div>
-                                    </div>
-                                    <span class="skill-rating">9.5/10</span>
-                                </div>
-                                <div class="skill-mastery-item">
-                                    <span class="skill-name">Go (Golang)</span>
-                                    <div class="skill-mastery-bar">
-                                        <div class="skill-mastery-fill" style="width: 92%"></div>
-                                    </div>
-                                    <span class="skill-rating">9.2/10</span>
-                                </div>
-                                <div class="skill-mastery-item">
-                                    <span class="skill-name">HTML/CSS</span>
-                                    <div class="skill-mastery-bar">
-                                        <div class="skill-mastery-fill" style="width: 97%"></div>
-                                    </div>
-                                    <span class="skill-rating">9.7/10</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="skills-category">
-                            <h5><i class="fas fa-layer-group me-2"></i> Frameworks & Libraries</h5>
-                            <div class="skills-list">
-                                <div class="skill-mastery-item">
-                                    <span class="skill-name">Angular</span>
-                                    <div class="skill-mastery-bar">
-                                        <div class="skill-mastery-fill" style="width: 99%"></div>
-                                    </div>
-                                    <span class="skill-rating">9.9/10</span>
-                                </div>
-                                <div class="skill-mastery-item">
-                                    <span class="skill-name">Laravel</span>
-                                    <div class="skill-mastery-bar">
-                                        <div class="skill-mastery-fill" style="width: 98%"></div>
-                                    </div>
-                                    <span class="skill-rating">9.8/10</span>
-                                </div>
-                                <div class="skill-mastery-item">
-                                    <span class="skill-name">Django</span>
-                                    <div class="skill-mastery-bar">
-                                        <div class="skill-mastery-fill" style="width: 97%"></div>
-                                    </div>
-                                    <span class="skill-rating">9.7/10</span>
-                                </div>
-                                <div class="skill-mastery-item">
-                                    <span class="skill-name">React</span>
-                                    <div class="skill-mastery-bar">
-                                        <div class="skill-mastery-fill" style="width: 90%"></div>
-                                    </div>
-                                    <span class="skill-rating">9.0/10</span>
-                                </div>
-                                <div class="skill-mastery-item">
-                                    <span class="skill-name">Vue.js</span>
-                                    <div class="skill-mastery-bar">
-                                        <div class="skill-mastery-fill" style="width: 88%"></div>
-                                    </div>
-                                    <span class="skill-rating">8.8/10</span>
-                                </div>
-                                <div class="skill-mastery-item">
-                                    <span class="skill-name">WordPress</span>
-                                    <div class="skill-mastery-bar">
-                                        <div class="skill-mastery-fill" style="width: 95%"></div>
-                                    </div>
-                                    <span class="skill-rating">9.5/10</span>
-                                </div>
-                                <div class="skill-mastery-item">
-                                    <span class="skill-name">CodeIgniter</span>
-                                    <div class="skill-mastery-bar">
-                                        <div class="skill-mastery-fill" style="width: 85%"></div>
-                                    </div>
-                                    <span class="skill-rating">8.5/10</span>
-                                </div>
-                                <div class="skill-mastery-item">
-                                    <span class="skill-name">Ionic</span>
-                                    <div class="skill-mastery-bar">
-                                        <div class="skill-mastery-fill" style="width: 90%"></div>
-                                    </div>
-                                    <span class="skill-rating">9.0/10</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="skills-category">
-                            <h5><i class="fas fa-database me-2"></i> Databases & Cloud</h5>
-                            <div class="skills-list">
-                                <div class="skill-mastery-item">
-                                    <span class="skill-name">MySQL</span>
-                                    <div class="skill-mastery-bar">
-                                        <div class="skill-mastery-fill" style="width: 96%"></div>
-                                    </div>
-                                    <span class="skill-rating">9.6/10</span>
-                                </div>
-                                <div class="skill-mastery-item">
-                                    <span class="skill-name">MongoDB</span>
-                                    <div class="skill-mastery-bar">
-                                        <div class="skill-mastery-fill" style="width: 88%"></div>
-                                    </div>
-                                    <span class="skill-rating">8.8/10</span>
-                                </div>
-                                <div class="skill-mastery-item">
-                                    <span class="skill-name">PostgreSQL</span>
-                                    <div class="skill-mastery-bar">
-                                        <div class="skill-mastery-fill" style="width: 85%"></div>
-                                    </div>
-                                    <span class="skill-rating">8.5/10</span>
-                                </div>
-                                <div class="skill-mastery-item">
-                                    <span class="skill-name">Google Cloud / App Engine</span>
-                                    <div class="skill-mastery-bar">
-                                        <div class="skill-mastery-fill" style="width: 87%"></div>
-                                    </div>
-                                    <span class="skill-rating">8.7/10</span>
-                                </div>
-                                <div class="skill-mastery-item">
-                                    <span class="skill-name">Microsoft Azure</span>
-                                    <div class="skill-mastery-bar">
-                                        <div class="skill-mastery-fill" style="width: 84%"></div>
-                                    </div>
-                                    <span class="skill-rating">8.4/10</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="skills-category">
-                            <h5><i class="fas fa-tools me-2"></i> Tools & State Management</h5>
-                            <div class="skills-list">
-                                <div class="skill-mastery-item">
-                                    <span class="skill-name">Git</span>
-                                    <div class="skill-mastery-bar">
-                                        <div class="skill-mastery-fill" style="width: 97%"></div>
-                                    </div>
-                                    <span class="skill-rating">9.7/10</span>
-                                </div>
-                                <div class="skill-mastery-item">
-                                    <span class="skill-name">Docker</span>
-                                    <div class="skill-mastery-bar">
-                                        <div class="skill-mastery-fill" style="width: 89%"></div>
-                                    </div>
-                                    <span class="skill-rating">8.9/10</span>
-                                </div>
-                                <div class="skill-mastery-item">
-                                    <span class="skill-name">Redux / NGRX</span>
-                                    <div class="skill-mastery-bar">
-                                        <div class="skill-mastery-fill" style="width: 91%"></div>
-                                    </div>
-                                    <span class="skill-rating">9.1/10</span>
-                                </div>
-                                <div class="skill-mastery-item">
-                                    <span class="skill-name">Gorilla Mux</span>
-                                    <div class="skill-mastery-bar">
-                                        <div class="skill-mastery-fill" style="width: 86%"></div>
-                                    </div>
-                                    <span class="skill-rating">8.6/10</span>
-                                </div>
-                                <div class="skill-mastery-item">
-                                    <span class="skill-name">OpenAI & LLM Integration</span>
-                                    <div class="skill-mastery-bar">
-                                        <div class="skill-mastery-fill" style="width: 90%"></div>
-                                    </div>
-                                    <span class="skill-rating">9.0/10</span>
+                                <div class="mt-3 pt-3 border-top">
+                                    <a href="https://kenshi.toybits.cloud/" target="_blank" class="ff-btn ff-btn-primary w-100">
+                                        <i class="fas fa-external-link-alt me-2"></i> Experience KENSHI
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="text-center mt-4">
-                        <div class="ff-alert ff-alert-success">
-                            <i class="fas fa-star me-2"></i> <strong>Complete Stack Mastery:</strong> 20+ technologies with proficiency ratings based on 6+ years of professional experience across 22+ projects.
+                    <!-- TopBar Assist PH -->
+                    <div class="col-md-4 mb-4">
+                        <div class="ff-card h-100">
+                            <div class="ff-card-body">
+                                <div class="mb-4 text-center">
+                                    <img src="https://toybits.cloud/uploads/toybits-promo-1772872763.png" 
+                                         alt="TopBar Assist PH" 
+                                         class="img-fluid rounded shadow-lg mb-2 w-100"
+                                         style="height: 180px; object-fit: cover; width: 100% !important;">
+                                </div>
+                                <h5 class="mb-3">TopBar Assist PH</h5>
+                                <p class="text-secondary mb-3">AI-powered mock exams, diagnostics, and performance feedback platform for Bar exam preparation.</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="tech-badge">AI/ML</span>
+                                    <span class="tech-badge">Assessment Platform</span>
+                                    <span class="tech-badge">Legal Tech</span>
+                                    <span class="tech-badge">Analytics</span>
+                                </div>
+                                <div class="mt-3 pt-3 border-top">
+                                    <a href="https://topbarassist.reviewcenterphil.com/" target="_blank" class="ff-btn ff-btn-primary w-100">
+                                        <i class="fas fa-external-link-alt me-2"></i> Explore Platform
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Cydapp -->
+                    <div class="col-md-4 mb-4">
+                        <div class="ff-card h-100">
+                            <div class="ff-card-body">
+                                <div class="mb-4 text-center">
+                                    <img src="https://toybits.cloud/uploads/toybits-promo-1772874542.png" 
+                                         alt="Cydapp" 
+                                         class="img-fluid rounded shadow-lg mb-2 w-100"
+                                         style="height: 180px; object-fit: cover; width: 100% !important;">
+                                </div>
+                                <h5 class="mb-3">Cydapp</h5>
+                                <p class="text-secondary mb-3">Personal AI-powered multi-tool application - a comprehensive suite of utilities for developers and professionals.</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="tech-badge">AI Integration</span>
+                                    <span class="tech-badge">Multi-Tool</span>
+                                    <span class="tech-badge">Productivity</span>
+                                    <span class="tech-badge">Developer Tools</span>
+                                </div>
+                                <div class="mt-3 pt-3 border-top">
+                                    <a href="https://cyd.reviewcenterphil.com/" target="_blank" class="ff-btn ff-btn-primary w-100">
+                                        <i class="fas fa-external-link-alt me-2"></i> Launch App
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Fix-It Auto Services -->
+                    <div class="col-md-4 mb-4">
+                        <div class="ff-card h-100">
+                            <div class="ff-card-body">
+                                <div class="mb-4 text-center">
+                                    <img src="https://toybits.cloud/uploads/toybits-promo-1772874830.png" 
+                                         alt="Fix-It Auto Services" 
+                                         class="img-fluid rounded shadow-lg mb-2 w-100"
+                                         style="height: 180px; object-fit: cover; width: 100% !important;">
+                                </div>
+                                <h5 class="mb-3">Fix-It Auto Services</h5>
+                                <p class="text-secondary mb-3">Automotive supplies and services webapp/system for auto repair businesses with inventory and scheduling.</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="tech-badge">E-commerce</span>
+                                    <span class="tech-badge">Inventory</span>
+                                    <span class="tech-badge">Scheduling</span>
+                                    <span class="tech-badge">CRM</span>
+                                </div>
+                                <div class="mt-3 pt-3 border-top">
+                                    <a href="https://app.fixitautoservices.com/" target="_blank" class="ff-btn ff-btn-primary w-100">
+                                        <i class="fas fa-external-link-alt me-2"></i> Visit Webapp
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- CLASS Apparel PH -->
+                    <div class="col-md-4 mb-4">
+                        <div class="ff-card h-100">
+                            <div class="ff-card-body">
+                                <div class="mb-4 text-center">
+                                    <img src="https://toybits.cloud/uploads/toybits-promo-1772875008.png" 
+                                         alt="CLASS Apparel PH" 
+                                         class="img-fluid rounded shadow-lg mb-2 w-100"
+                                         style="height: 180px; object-fit: cover; width: 100% !important;">
+                                </div>
+                                <h5 class="mb-3">CLASS Apparel PH</h5>
+                                <p class="text-secondary mb-3">Professional t-shirt printing and custom apparel services with premium quality, fast turnaround, and exceptional customer support.</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="tech-badge">E-commerce</span>
+                                    <span class="tech-badge">Custom Printing</span>
+                                    <span class="tech-badge">Apparel Design</span>
+                                    <span class="tech-badge">Customer Support</span>
+                                </div>
+                                <div class="mt-3 pt-3 border-top">
+                                    <a href="https://app.classapparelph.com/" target="_blank" class="ff-btn ff-btn-primary w-100">
+                                        <i class="fas fa-external-link-alt me-2"></i> Visit Store
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
 
         <!-- Contact Section -->
         <section id="contact" class="ff-window mb-4">
@@ -2991,8 +3001,9 @@
                 <div class="row align-items-center">
                     <div class="col-md-4">
                         <div class="d-flex flex-column justify-content-center h-100">
-                            <h5>CYD</h5>
-                            <p class="text-secondary mb-0">Software Engineer / Developer / Programmer</p>
+                            <h5>Cleddrece Yuandenn M. Dalupan</h5>
+                            <p class="text-secondary mb-0">Full-Stack IT Solutions Architect</p>
+                            <p class="text-muted small mt-1">Professional Alias: <strong>CYD</strong></p>
                         </div>
                     </div>
                     
@@ -3717,7 +3728,58 @@
                     this.reset();
                 });
             }
+            
+            // Initialize screenshot modal functionality
+            initScreenshotModal();
         });
+        
+        // Screenshot Modal Functions
+        function initScreenshotModal() {
+            // Close modal when clicking outside the image
+            const modal = document.getElementById('screenshotModal');
+            if (modal) {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                        closeScreenshotModal();
+                    }
+                });
+                
+                // Close modal with Escape key
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && modal.style.display === 'flex') {
+                        closeScreenshotModal();
+                    }
+                });
+            }
+        }
+        
+        function openScreenshotModal(imageSrc, caption) {
+            const modal = document.getElementById('screenshotModal');
+            const modalImg = document.getElementById('modalScreenshot');
+            const captionText = document.getElementById('modalCaption');
+            
+            if (modal && modalImg) {
+                modal.style.display = 'flex';
+                modalImg.src = imageSrc;
+                modalImg.alt = caption;
+                
+                if (captionText && caption) {
+                    captionText.innerHTML = `<strong>${caption}</strong>`;
+                }
+                
+                // Prevent body scrolling when modal is open
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        
+        function closeScreenshotModal() {
+            const modal = document.getElementById('screenshotModal');
+            if (modal) {
+                modal.style.display = 'none';
+                // Restore body scrolling
+                document.body.style.overflow = 'auto';
+            }
+        }
     </script>
 </body>
 </html>
